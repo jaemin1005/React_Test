@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/app.ts',
+  entry: './src/app.tsx',
   output: {
     path: path.resolve(__dirname, 'webpack'),
     filename: 'bundle.js',
@@ -14,13 +14,13 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       }
     ]
   },
   resolve: {
-    extensions: [".ts", ".js"]
+    extensions: [".ts", ".js", ".tsx", ".jsx"]
   }
 };
