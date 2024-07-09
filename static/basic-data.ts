@@ -1,0 +1,1 @@
+export const minam : string = "공욱재";
