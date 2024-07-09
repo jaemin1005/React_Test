@@ -1,7 +1,7 @@
 import React from 'react'
 import "../public/css/test.css"
 import { minam } from "../static/basic-data"
-import Minam from 'minam'
+import Minam from './minam'
 
 const App:React.FC = () => {
   return (
