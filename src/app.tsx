@@ -1,17 +1,34 @@
-import React from 'react'
-import "../public/css/test.css"
-import { minam, listName } from "../static/basic-data"
-import Minam from './minam'
-import ULLi from './UlLi'
+import React from "react";
 
-const App:React.FC = () => {
+const App: React.FC = () => {
+  let styles: React.CSSProperties = {
+    width: "100vw",
+    height: "100vh",
+    backgroundColor: "white",
+  };
+
+  let elementData = {
+    loginInput: {
+      textNode: "input",
+    },
+    loginSubmit: {
+      textNode: "click",
+    },
+  }
+
+  const loginSubmit = () => {
+    alert("hello");
+  };
   return (
     <div>
-      <Minam textNode={minam}/>
-      <h1>Hello world</h1>
-      <ULLi item={listName}/>
+      <div id="login" style={styles}>
+        <div id="login-input">{elementData.loginInput.textNode}</div>
+        <div id="login-submit" onClick={loginSubmit}>
+          {elementData.loginSubmit.textNode}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
